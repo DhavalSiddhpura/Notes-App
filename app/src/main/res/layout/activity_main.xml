@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:id="@+id/nav">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Notes App"
+            android:textSize="30sp"
+            android:textColor="@color/green"
+            android:fontFamily="sans-serif-black"
+            android:layout_marginHorizontal="30dp"
+            android:layout_marginTop="12dp"
+            />
+
+    </LinearLayout>
+<androidx.cardview.widget.CardView
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_below="@+id/nav"
+    android:id="@+id/searchViewcard"
+    android:layout_margin="10dp"
+    app:cardCornerRadius="20dp">
+
+    <androidx.appcompat.widget.SearchView
+        android:id="@+id/searchView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/color5"
+        app:queryHint="Search Notes"
+        app:iconifiedByDefault="false"
+        android:textColorHint="@color/white"
+        />
+
+</androidx.cardview.widget.CardView>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/searchViewcard"
+        android:id="@+id/noteRv"
+        android:layout_marginHorizontal="10dp"
+        android:layout_marginVertical="20dp"
+     />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginVertical="24dp"
+        android:id="@+id/addBtn"
+        android:backgroundTint="@color/green"
+        android:src="@drawable/baseline_add_24"/>
+</RelativeLayout>
